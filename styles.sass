@@ -1,0 +1,118 @@
+// Variables
+$black: #000000
+$white: #ffffff
+$grey1: #646671
+$chart-height: 200px
+
+// Fonts
+@font-face 
+    font-family: SFPro
+    src: url("./assets/fonts/SF-Pro-Display-Light.otf")
+    font-weight: 300
+
+@font-face 
+    font-family: SFPro
+    src: url("./assets/fonts/SF-Pro-Display-Medium.otf")
+    font-weight: 500
+
+
+@mixin top-heading
+    font-weight: 300
+    font-size: 1rem
+    color: $grey1
+    letter-spacing: 1px
+
+@mixin main-heading
+    font-weight: 300
+    font-size: 1.2rem
+    color: $white
+    letter-spacing: 1.1px
+    text-transform: capitalize
+
+@mixin chart-line-label
+    font-weight: 300
+    font-size: 0.7rem
+    color: $white
+    letter-spacing: 1px
+
+@mixin chart-label
+    font-weight: 300
+    font-size: 1rem
+    color: $white
+    letter-spacing: 1px
+
+@mixin chart-value
+    font-weight: 300
+    font-size: 0.9rem
+    color: $white
+    letter-spacing: 1px
+
+    
+html, body
+    font-family: SFPro, Helvetica, sans-serif
+    background: black
+    margin: 0
+    padding: 0
+
+header
+    padding: 24px
+    padding-top: 50px
+    text-align: center
+    .logo
+        text-align: center
+        img
+            width: 220px
+    .top-heading
+        @include top-heading
+
+.contents
+    .main-heading
+        text-align: center
+        h2
+            @include main-heading
+
+    .charts
+        padding: 0 20%
+        margin-top: 100px
+        display: flex
+        justify-content: space-between
+        .chart-container
+            width: 30%
+            text-align: center
+            .chart-elements
+                display: flex
+                justify-content: center
+                width: 100%
+                .el
+                    width: 56px
+                    display: flex
+                    flex-direction: column
+                    align-items: center
+                    
+                    .line-container
+                        height: $chart-height
+                        display: flex
+                        align-items: flex-end
+                        .line
+                            height: 100%
+                            width: 1px
+                            background: $white
+                            margin-bottom: 16px
+                            position: relative
+                            &.you
+                                width: 3px
+                            .el-val
+                                @include chart-value
+                                position: absolute
+                                margin: auto
+                                top: -20px
+                                left: -5px
+                                right: 0
+                    .label
+                        @include chart-line-label
+
+            .chart-label
+                @include chart-label
+                margin-top: 32px
+
+

@@ -1,0 +1,141 @@
+@font-face {
+  font-family: SFPro;
+  src: url("./assets/fonts/SF-Pro-Display-Light.otf");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: SFPro;
+  src: url("./assets/fonts/SF-Pro-Display-Medium.otf");
+  font-weight: 500;
+}
+
+html, body {
+  font-family: SFPro, Helvetica, sans-serif;
+  background: black;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  padding: 24px;
+  padding-top: 50px;
+  text-align: center;
+}
+
+header .logo {
+  text-align: center;
+}
+
+header .logo img {
+  width: 220px;
+}
+
+header .top-heading {
+  font-weight: 300;
+  font-size: 1rem;
+  color: #646671;
+  letter-spacing: 1px;
+}
+
+.contents .main-heading {
+  text-align: center;
+}
+
+.contents .main-heading h2 {
+  font-weight: 300;
+  font-size: 1.2rem;
+  color: #ffffff;
+  letter-spacing: 1.1px;
+  text-transform: capitalize;
+}
+
+.contents .charts {
+  padding: 0 20%;
+  margin-top: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contents .charts .chart-container {
+  width: 30%;
+  text-align: center;
+}
+
+.contents .charts .chart-container .chart-elements {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.contents .charts .chart-container .chart-elements .el {
+  width: 56px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contents .charts .chart-container .chart-elements .el .line-container {
+  height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.contents .charts .chart-container .chart-elements .el .line-container .line {
+  height: 100%;
+  width: 1px;
+  background: #ffffff;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.contents .charts .chart-container .chart-elements .el .line-container .line.you {
+  width: 3px;
+}
+
+.contents .charts .chart-container .chart-elements .el .line-container .line .el-val {
+  font-weight: 300;
+  font-size: 0.9rem;
+  color: #ffffff;
+  letter-spacing: 1px;
+  position: absolute;
+  margin: auto;
+  top: -20px;
+  left: -5px;
+  right: 0;
+}
+
+.contents .charts .chart-container .chart-elements .el .label {
+  font-weight: 300;
+  font-size: 0.7rem;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+.contents .charts .chart-container .chart-label {
+  font-weight: 300;
+  font-size: 1rem;
+  color: #ffffff;
+  letter-spacing: 1px;
+  margin-top: 32px;
+}
+/*# sourceMappingURL=styles.css.map */
